@@ -1,0 +1,42 @@
+{
+  "name": "grunt-contrib-groontograf",
+  "description": "Prints pretty-typed-text",
+  "version": "0.1.0",
+  "homepage": "http://groontograf.bespoyasov.ru",
+  "author": {
+    "name": "Alexander Bespoyasov",
+    "email": "bespoyasov@me.com",
+    "url": "bespoyasov.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bespoyasov/groontograf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bespoyasov/groontograf/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://groontograf.bespoyasov.ru/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
