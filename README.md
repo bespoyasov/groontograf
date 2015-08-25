@@ -48,6 +48,6 @@ hangClassName: ['qtSpace', 'qt', 'brtSpace', 'brt'],
 halfSpaceClassName: 'halfspace'
 ```
 
-Тогда вместо инлайновых стилей грунтограф пропишет классы: smallcaps, qtSpace, qt, brtSpace, brt, halfspace.
+Тогда вместо инлайновых стилей грунтограф пропишет классы: `smallcaps`, `qtSpace`, `qt`, `brtSpace`, `brt`, `halfspace`.
 
 http://groontograf.bespoyasov.ru
