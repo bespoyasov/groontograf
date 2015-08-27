@@ -9,7 +9,7 @@
 Чтобы установить грунтограф, зайдите через терминал в папку с проектом и вызовите команду:
 
 ```shell
-npm install grunt-cotrib-groontograf --save-dev
+npm i grunt-cotrib-groontograf --save-dev
 ```
 
 ## Настройка
@@ -18,11 +18,11 @@ npm install grunt-cotrib-groontograf --save-dev
 
 ```js
 typographer: {
-	compile: {
-		options: {
+  compile: {
+    options: {
       hang: true,
       abbr: true,
-			halfSpaces: true,
+      halfSpaces: true,
       styles: 'inline'
     },
     files: {
