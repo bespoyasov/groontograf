@@ -26,7 +26,7 @@ typographer: {
       styles: 'inline'
     },
     files: {
-      'dest/good.html': ‘src/bad.html’
+      'dest/good.html': 'src/bad.html'
     }
   }
 }
