@@ -48,6 +48,6 @@ hangClassName: ['hp_quote_space', 'hp_quote', 'hp_bracket_space', 'hp_bracket'],
 halfSpaceClassName: 'halfspace'
 ```
 
-Тогда вместо инлайновых стилей грунтограф пропишет классы: `smallcaps`, `qtSpace`, `qt`, `brtSpace`, `brt`, `halfspace`. Рекомендуется скачать [файл стилей](https://github.com/bespoyasov/groontograf/product/groontograf.css), если вы не хотите прописывать стили для классов самостоятельно.
+Тогда вместо инлайновых стилей грунтограф пропишет классы: `smallcaps`, `qtSpace`, `qt`, `brtSpace`, `brt`, `halfspace`. Рекомендуется скачать [файл стилей](https://github.com/bespoyasov/groontograf/blob/master/product/groontograf.css), если вы не хотите прописывать стили для классов самостоятельно.
 
 http://groontograf.bespoyasov.ru
