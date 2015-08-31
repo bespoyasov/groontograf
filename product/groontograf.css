@@ -1,0 +1,11 @@
+/* Small caps */
+.smallcapitals {font-size: 0.875em; letter-spacing: 0.15em; margin-right: -0.15em;}
+
+/* Hang punctuation */
+.hp_quote_space {margin-right: 0.7em;}
+.hp_quote {margin-left: -0.7em;}
+.hp_bracket_space {margin-right: 0.3em;}
+.hp_bracket {margin-left: -0.3em;}
+
+/* Half scape */
+.halfspace {width:0.15em; margin:0; display:inline-block; white-space:nowrap;}
