@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 				halfSpaceNobreakStart = '<nobr data-typo-nobr>',
 				halfSpaceNobreakEnd = '</nobr>',
 				halfSpaceTemplate = '<span style="width:0.15em; margin:0; display:inline-block; white-space:nowrap;"> </span>',
-				hangTemplateQuote = '<span style="margin-right: 0.7em;"> </span><span style="margin-left: -0.7em;">«</span>',
+				hangTemplateQuote = '<span style="margin-right: 0.5em;"> </span><span style="margin-left: -0.5em;">«</span>',
 				hangTemplateBracket = '<span style="margin-right: 0.3em;"> </span><span style="margin-left: -0.3em;">(</span>';
 		
 		
