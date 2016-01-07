@@ -17,17 +17,15 @@ npm install grunt-contrib-groontograf --save-dev
 Пример грант-файла: 
 
 ```js
-typographer: {
-  compile: {
-    options: {
-      hang: true,
-      abbr: true,
-      halfSpaces: true,
-      styles: 'inline'
-    },
-    files: {
-      'dest/good.html': 'src/bad.html'
-    }
+groontograf: {
+  options: {
+    hang: true,
+    abbr: true,
+    halfSpaces: true,
+    styles: 'inline'
+  },
+  files: {
+    'dest/good.html': 'src/bad.html'
   }
 }
 ```
