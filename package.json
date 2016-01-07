@@ -1,7 +1,7 @@
 {
   "name": "grunt-contrib-groontograf",
   "description": "Prints pretty-typed-text",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "http://groontograf.bespoyasov.ru",
   "author": {
     "name": "Alexander Bespoyasov",
