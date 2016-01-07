@@ -10,7 +10,7 @@
 
 module.exports = function(grunt) {
 
-  grunt.registerMultiTask('groontograf', 'Prints pretty-typed-HTML', function() {
+	grunt.registerMultiTask('groontograf', 'Prints pretty-typed-HTML', function() {
 
 		var options = this.options(),
 				lang = options.lang || 'ru',
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 		// after this words we have to set nobreak space
 		// sorry, will add English soon
 		var words = [
-			'в течение', 'накануне', 'в ходе', 'в', 'из', 'изо', 'к', 'ко', 'у', 'по',  'из-за', 'по-над', 'под', 'подо', 'около', 'вокруг', 'перед', 'возле', 'до', 'через', 'с', 'от', 'ото', 'со', 'за', 'из-за', 'благодаря', 'ввиду', 'вследствие', 'для', 'ради', 'о', 'об', 'обо', 'про', 'насчет', 'и', 'не', 'над', 'при', 'на', 'да', 'не только', 'но', 'также', 'тоже', 'ни', 'как', 'так', 'а', 'зато', 'однако', 'же', 'все', 'всё', 'или', 'либо', 'то', 'ли', 'что', 'чтобы', 'когда', 'лишь', 'едва', 'дабы', 'если бы', 'если', 'коли', 'хотя', 'хоть', 'пускай', 'пусть', 'как будто', 'будто', 'словно', 'пока', 'г.', 'обл.', 'ул.', 'пр.', 'кв.', 'ш.', 'пер.', '§', 'я', 'ты', 'мы', 'вы', 'он', 'она', 'оно', 'они', 'это', 'эта', 'этот', 'эти', 'этому', 'этой', 'чем', 'тем'
+			'в течение', 'накануне', 'в ходе', 'в', 'из', 'изо', 'к', 'ко', 'у', 'по',	'из-за', 'по-над', 'под', 'подо', 'около', 'вокруг', 'перед', 'возле', 'до', 'через', 'с', 'от', 'ото', 'со', 'за', 'из-за', 'благодаря', 'ввиду', 'вследствие', 'для', 'ради', 'о', 'об', 'обо', 'про', 'насчет', 'и', 'не', 'над', 'при', 'на', 'да', 'не только', 'но', 'также', 'тоже', 'ни', 'как', 'так', 'а', 'зато', 'однако', 'же', 'все', 'всё', 'или', 'либо', 'то', 'ли', 'что', 'чтобы', 'когда', 'лишь', 'едва', 'дабы', 'если бы', 'если', 'коли', 'хотя', 'хоть', 'пускай', 'пусть', 'как будто', 'будто', 'словно', 'пока', 'г.', 'обл.', 'ул.', 'пр.', 'кв.', 'ш.', 'пер.', '§', 'я', 'ты', 'мы', 'вы', 'он', 'она', 'оно', 'они', 'это', 'эта', 'этот', 'эти', 'этому', 'этой', 'чем', 'тем'
 		];
 		
 		var capitals = [], allcaps = [], titleContent;
@@ -71,54 +71,54 @@ module.exports = function(grunt) {
 
 
 
-    this.files.forEach(function(f) {
+		this.files.forEach(function(f) {
 
-      var src = f.src.filter(function(filepath) {
-        
-        if (!grunt.file.exists(filepath)) {
-          grunt.log.warn('Source file "' + filepath + '" not found.');
-          return false;
-        } else {return true;}
-        
-      }).map(function(filepath) {
-	      
-        return grunt.file.read(filepath);
-        
-      });
-      
+			var src = f.src.filter(function(filepath) {
+				
+				if (!grunt.file.exists(filepath)) {
+					grunt.log.warn('Source file "' + filepath + '" not found.');
+					return false;
+				} else {return true;}
+				
+			}).map(function(filepath) {
+				
+				return grunt.file.read(filepath);
+				
+			});
+			
 
 
 			// remove multistring
-      src = src.toString();
-      src = src.split('\r').join('');
-      
-      
-      
-      // remember <title> content
+			src = src.toString();
+			src = src.split('\r').join('');
+			
+			
+			
+			// remember <title> content
 			titleContent = src.substring(src.indexOf('<title>'), src.indexOf('</title>')).replace('<title>','');
-      
-      
-      
-      // nobreak spaces
-      for (var i = 0; i < nwl; ++i) {
-	      var regexp = ' '+newWords[i]+' ';
-	      src = src.split(regexp).join(' '+newWords[i]+' ');
-      }
-      
-      
-      
-      // punctuation (no quotes yet)
-      var pl = punctuationFrom.length;
-      
-      for (var j = 0; j < pl; ++j) {
-	      var spliter = punctuationFrom[j];
-	      var glue = punctuationTo[j];
-	      src = src.split(spliter).join(glue);
-      }
-      
-      
-        
-      // sepc chars
+			
+			
+			
+			// nobreak spaces
+			for (var i = 0; i < nwl; ++i) {
+				var regexp = ' '+newWords[i]+' ';
+				src = src.split(regexp).join(' '+newWords[i]+' ');
+			}
+			
+			
+			
+			// punctuation (no quotes yet)
+			var pl = punctuationFrom.length;
+			
+			for (var j = 0; j < pl; ++j) {
+				var spliter = punctuationFrom[j];
+				var glue = punctuationTo[j];
+				src = src.split(spliter).join(glue);
+			}
+			
+			
+				
+			// sepc chars
 			var copy = "©",
 					reg = "®",
 					ndash = "–",
@@ -131,10 +131,10 @@ module.exports = function(grunt) {
 			src = src.replace(/\(С\)/g, copy);
 			src = src.replace(/\(r\)/g, reg);
 			src = src.replace(/\(R\)/g, reg);
-      
-          
-          
-      // quotes (some magic from http://erlang.kirillpanfilov.com/devanagari/?q=devanagari.rhtml )
+			
+					
+					
+			// quotes (some magic from http://erlang.kirillpanfilov.com/devanagari/?q=devanagari.rhtml )
 			src = src.replace(/«|»|„|“|”/g,'"');
 			
 			var srctmp = new RegExp('( | )"\\.', 'g');
@@ -232,10 +232,10 @@ module.exports = function(grunt) {
 
 			
 			// finish
-      grunt.file.write(f.dest, src);
-      grunt.log.writeln('File "' + f.dest + '" created.');
-      
-    });
-  });
+			grunt.file.write(f.dest, src);
+			grunt.log.writeln('File "' + f.dest + '" created.');
+			
+		});
+	});
 
 };
