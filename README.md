@@ -18,14 +18,16 @@ npm install grunt-contrib-groontograf --save-dev
 
 ```js
 groontograf: {
-  options: {
-    hang: true,
-    abbr: true,
-    halfSpaces: true,
-    styles: 'inline'
-  },
-  files: {
-    'dest/good.html': 'src/bad.html'
+  compile: {
+    options: {
+      hang: true,
+      abbr: true,
+      halfSpaces: true,
+      styles: 'inline'
+    },
+    files: {
+      'dest/good.html': 'src/bad.html'
+    }
   }
 }
 ```
